@@ -2,25 +2,19 @@ import java.util.Arrays;
 
 public class Ciudades {
     //atributos
-    private String nombre;
-    private String[][] temperaturas;
-    private  int cantidad;
+    private String [][] temperaturas;
+    private String [] nombresCiudades;
+    private int cantidadCiudades;
 
-    // constructor
+    //constructor
 
-    public Ciudades(String nombre, String[][] temperaturas, int cantidad) {
-        this.nombre = nombre;
+
+    public Ciudades(String[][] temperaturas, String[] nombresCiudades,int cantidadCiudades) {
         this.temperaturas = temperaturas;
-        this.cantidad = cantidad;
+        this.nombresCiudades = nombresCiudades;
+        this.cantidadCiudades = cantidadCiudades;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public String[][] getTemperaturas() {
         return temperaturas;
@@ -30,20 +24,28 @@ public class Ciudades {
         this.temperaturas = temperaturas;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public String[] getNombresCiudades() {
+        return nombresCiudades;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setNombresCiudades(String[] nombresCiudades) {
+        this.nombresCiudades = nombresCiudades;
+    }
+
+    public int getCantidadCiudades() {
+        return cantidadCiudades;
+    }
+
+    public void setCantidadCiudades(int cantidadCiudades) {
+        this.cantidadCiudades = cantidadCiudades;
     }
 
     @Override
     public String toString() {
         return "Ciudades{" +
-                "nombre='" + nombre + '\'' +
-                ", temperaturas=" + Arrays.toString(temperaturas) +
-                ", cantidad=" + cantidad +
+                "temperaturas=" + Arrays.toString(temperaturas) +
+                ", nombresCiudades=" + Arrays.toString(nombresCiudades) +
+                ", cantidadCiudades=" + cantidadCiudades +
                 '}';
     }
 }
